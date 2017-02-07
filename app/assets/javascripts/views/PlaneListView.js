@@ -1,10 +1,11 @@
 var app = app || {};
 
-app.PlaneListView = Backbone.View.extend({
+app.Reservation = Backbone.View.extend({
   el: '#main',
 
   render: function(){
-    var appTemplate = $('#appTemplate').html();
+    var origin = $('#origin').html();
+    var destination = $('#destinaton').html();
     this.$el.html(appTemplate)
   }
 
