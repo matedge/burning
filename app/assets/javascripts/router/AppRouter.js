@@ -1,6 +1,6 @@
 var app = app || {};
 
- app.Router = Backbone.Router.extend({
+ app.AppRouter = Backbone.Router.extend({
    routes: {
      '': 'airplanes',
      'airplanes': 'airplanes',
