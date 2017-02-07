@@ -19,6 +19,9 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 
 <script id="newsearchView" type="text/template">
   <h2>Search Flights</h2>
+  <textarea id= 'origin' autofocus placeholder="Origin"></textarea>
+  <textarea id= 'destination' placeholder="Destination"></textarea>
+  <button>Submit</button>
 </script>
 
 <script id="searchListView" type="text/template">
