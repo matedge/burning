@@ -17,9 +17,19 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 
 <div id="main" class="container"></div>
 
- <!-- <script id="appTemplate" type="text/template">
- </script> -->
+<script id="newsearchView" type="text/template">
+  <h2>Search Flights</h2>
+</script>
 
+<script id="searchListView" type="text/template">
+  <h3>Search Results</h3>
+  <table>
+    <thead class="thead">
+      <th>Date</th>
+      <th>Flight</th>
+      <th>From > To</th>
+      <th>Plane</th>
+    </thead>
+  </table>
 
- <!-- <script id="appViewTemplate" type="text/template">
- </script> -->
+</script>
