@@ -5,7 +5,7 @@
 <div id="main"></div>
 
 <script type="text/javascript">
-// app.user_id = <%= session[:user_id] %>   // uses ruby to get id of login user
+app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 </script>
 
 
