@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require underscore-min
-//= require backbone-min
-//= require_tree ./backbone/models
-//= require_tree ./backbone/collections
+//= require underscore
+//= require backbone
+//= require_tree ./models
+//= require_tree ./collections
 //= require_tree .
