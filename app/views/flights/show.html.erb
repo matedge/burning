@@ -17,3 +17,15 @@
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>
+
+<!-- Flight Summary Template. -->
+ <script id="seatsView" type="text/template">
+</script>
+
+<script id="bookingView" type="text/template">
+  <h2>Flight information</h2>
+  <div id="seatsView"></div>
+  <form>
+    <button id="selectSeat">Select Seat</button>
+  </form>
+</script>

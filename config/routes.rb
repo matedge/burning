@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'pages#app'
+  root :to => 'pages#home'
   resources :reservations
   resources :users
   resources :flights
@@ -8,5 +8,11 @@ Rails.application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
+
+  # get '/planes' => 'planes#search'
+  # get '/search' => 'flights#search'
+
+
+
 
 end
