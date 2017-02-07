@@ -18,6 +18,6 @@ var app = app || {};
    },
 
    flight: function(id) {
-     console.log('flight (id: ' id  ')');
+     console.log('flight');
    }
  })
