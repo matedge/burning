@@ -1,9 +1,12 @@
 <h1>Pages#app</h1>
 <p>Find me in app/views/pages/app.html.erb</p>
-
+<div id="userName"></div>
 
 <div id="main"></div>
 
+<script type="text/javascript">
+app.user_id = <%= session[:user_id] %>   // uses ruby to get id of login user
+</script>
 
 
 <a href="#">Planes</a>

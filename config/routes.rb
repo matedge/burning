@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'pages#app'
+  root :to => 'pages#home'
   resources :reservations
   resources :users
   resources :flights
