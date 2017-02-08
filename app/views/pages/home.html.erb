@@ -16,6 +16,7 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
   <div><img src="http://www.seamantours.com/wp-content/uploads/2016/04/homepage-flights.jpg" alt=""></div>
 <div id="mybox">
   <h2>Search Flights</h2>
+
   <br>
   <br>
   <textarea id= 'origin' autofocus placeholder="Origin"></textarea>
@@ -27,12 +28,25 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 <script id="searchListView" type="text/template">
   <h3>Search Results</h3>
   <table>
+
+  <textarea id= 'origin' autofocus placeholder="Origin"></textarea>
+  <textarea id= 'destination' placeholder="Destination"></textarea>
+  <button>Submit</button>
+  <table style="display:none">
+
     <thead class="thead">
       <th>Date</th>
       <th>Flight</th>
       <th>From > To</th>
       <th>Plane</th>
     </thead>
+    <tbody id="searchResults"></tbody>
   </table>
+</script>
 
+<script id="searchListView" type="text/template">
+  <td>{{date}}</td>
+  <td>{{id}}</td>
+  <td>{{origin}} &gt; {{destination}}</td>
+  <td>7</td>
 </script>

@@ -15,6 +15,8 @@ var app = app || {};
      app.newsearchview = new app.NewsearchView({collection: app.flights});
      app.newsearchview.render();
 
+     
+
    },
 
    viewPlane: function() {
