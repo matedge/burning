@@ -1,13 +1,13 @@
 var app = app || {};
 
-app.Reservation = Backbone.View.extend({
-  el: '#NewsearchView',
+app.NewsearchView = Backbone.View.extend({
+  el: '#main',
 
   render: function(){
-    var $origin = $('#origin').html();
-    var $destination = $('#destinaton').html();
-    $origin.appendTO
-    this.$el.html(appTemplate)
+    debugger
+    this.$el.html( $('#newsearchView').html() );
   }
+
+
 
 });

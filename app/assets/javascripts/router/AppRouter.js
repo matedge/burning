@@ -12,6 +12,9 @@ var app = app || {};
 
    index: function () {
      console.log('main');
+     var NewsearchView = new app.NewsearchView();
+     NewsearchView.render();
+
    },
 
    viewPlane: function() {
