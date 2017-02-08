@@ -4,21 +4,49 @@ body{
 }
 
 #mybox{
-  border: 0.3em solid orange;
+
   width: 1100px;
   text-align: center;
-  height: 200px;
-  margin: -220px 340px auto;
+  height: 250px;
+  margin: -270px 380px auto;
   position: absolute;
-  background: orange;
+  background: rgba(255, 165, 0, 0.66);
   opacity: 0.5;
 }
 
 
 img{
   width: 2200px;
-  height: 600px;
+  height: 999px;
   opacity: 1%;
   position: relative;
+  margin: -21px 0 -12px 0;
 
+}
+table#x{
+  text-align: center;
+  margin: 0 auto;
+}
+table th{
+  padding: 18px;
+}
+
+#origin{
+  border: none;
+  border-bottom: solid 2px black;
+  border-right: solid 1px black;
+  background-color: #ffc107;
+
+}
+
+#destination{
+  border: none;
+  border-bottom: solid 2px black;
+  border-left: solid 1px black;
+  background-color: #ffc107;
+}
+
+button  {
+  vertical-align: top;
+  margin: 7px;
 }
