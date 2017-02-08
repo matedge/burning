@@ -13,9 +13,9 @@ p3 = Plane.create :name=>"Airbus A320", :rows=>10, :columns=>5
 
 
 Flight.destroy_all
-f1 = Flight.create :date =>"27/4/2017", :origin =>"Sydney",  :destination =>"Melbourn"
-f2 = Flight.create :date =>"17/7/2017", :origin =>"Sydney",  :destination =>"London"
-f3 = Flight.create :date =>"23/3/2017", :origin =>"Sydney",  :destination =>"China"
+f1 = Flight.create :date =>"27/4/2017", :origin =>"Sydney",  :destination =>"Melbourn", :plane_id =>1
+f2 = Flight.create :date =>"17/7/2017", :origin =>"Sydney",  :destination =>"London", :plane_id =>1
+f3 = Flight.create :date =>"23/3/2017", :origin =>"Sydney",  :destination =>"China", :plane_id =>1
 
 
 Reservation.destroy_all
