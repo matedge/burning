@@ -5,8 +5,9 @@ var app = app || {};
      '': 'index',
      'planes': 'viewPlane',
      'flights': 'viewFlight',
-     'flights/:id': 'viewBook',
-     'search': "viewSearch"
+     'flights/:flightid': 'viewFlightById',
+     'search': "viewSearch",
+     "*other": "defaultRoute"
 
    },
 
@@ -15,7 +16,7 @@ var app = app || {};
      app.newsearchview = new app.NewsearchView({collection: app.flights});
      app.newsearchview.render();
 
-     
+
 
    },
 
@@ -25,10 +26,17 @@ var app = app || {};
 
    viewFlight: function() {
      console.log('flights');
+     app.seatsview = new SeatsView({ el: "#container" });
+     app.seatsview.render();
    },
 
-   viewBook: function() {
+   viewFlightById: function(flightid) {
+
      console.log('flights/:id');
+     app.seatsview = new SeatsView({ el: "#container" , flightsid : flightid});
+    //  app.seatsview.fetch();
+     console.log(app.seatsview);
+     app.seatsview.render();
    },
 
    viewSearch: function() {
@@ -37,3 +45,19 @@ var app = app || {};
 
 
  })
+$(document).ready(function() {
+ var router = new app.AppRouter();
+  // Backbone.history.start();
+  var NavView = Backbone.View.extend({
+    events: {
+      "click": "onClick"
+    },
+
+    onClick: function(e){
+      var $li = $(e.target);
+      router.navigate($li.attr("data-url"), { trigger: true });
+    }
+  });
+
+  var navView = new NavView({ el: "#nav" });
+  });

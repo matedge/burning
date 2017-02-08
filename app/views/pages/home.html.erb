@@ -48,7 +48,10 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 
 <script id="searchListView" type="text/template">
   <td>{{date}}</td>
-  <td>{{id}}</td>
+  <td id='flightsid'>{{id}}</td>
   <td>{{origin}} &gt; {{destination}}</td>
   <td>7</td>
 </script>
+
+
+<div id="container"></div>
