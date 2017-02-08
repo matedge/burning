@@ -19,20 +19,23 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 
 <script id="newsearchView" type="text/template">
   <h2>Search Flights</h2>
-  <textarea id= 'origin' autofocus placeholder="Origin"></textarea>
-  <textarea id= 'destination' placeholder="Destination"></textarea>
+  <textarea id= 'origin' autofocus placeholder="Origin">Sydney</textarea>
+  <textarea id= 'destination' placeholder="Destination">China</textarea>
   <button>Submit</button>
-</script>
-
-<script id="searchListView" type="text/template">
-  <h3>Search Results</h3>
-  <table>
+  <table style="display:none">
     <thead class="thead">
       <th>Date</th>
       <th>Flight</th>
       <th>From > To</th>
       <th>Plane</th>
     </thead>
+    <tbody id="searchResults"></tbody>
   </table>
+</script>
 
+<script id="searchListView" type="text/template">
+  <td>{{date}}</td>
+  <td>{{id}}</td>
+  <td>{{origin}} &gt; {{destination}}</td>
+  <td>7</td>
 </script>
