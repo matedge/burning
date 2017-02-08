@@ -1,7 +1,8 @@
 var app = app || {};
 
  app.Flight = Backbone.Model.extend({
-  //  urlRoot: '/flights',
+   idAttribute: "flightid",
+   urlRoot: '/flights',
    defaults: {
      date: 'Undefined Date',
      origin: 'Unknown Origin',
@@ -11,3 +12,5 @@ var app = app || {};
 
 
 app.flight = new app.Flight();
+app.flight.fetch()
+console.log(app.flight)
