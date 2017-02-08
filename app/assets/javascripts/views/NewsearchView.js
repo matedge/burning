@@ -13,10 +13,12 @@ app.NewsearchView = Backbone.View.extend({
 
     var $origin = $('#origin').val()
     var $destination = $('#destination').val()
-
+    var view = this
     this.collection.fetch().done(function(results){
+      var searchResults = view.collection.where({origin:$origin,destination:$destination})
+      console.log(searchResults);
     })
-    var searchResults = this.collection.where({origin:$origin,destination:$destination})
+
   }
 
 
