@@ -12,8 +12,8 @@ var app = app || {};
 
    index: function () {
      console.log('main');
-     var NewsearchView = new app.NewsearchView();
-     NewsearchView.render();
+     app.newsearchview = new app.NewsearchView({collection: app.flights});
+     app.newsearchview.render();
 
    },
 
