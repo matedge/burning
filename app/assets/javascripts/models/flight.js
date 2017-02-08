@@ -1,12 +1,13 @@
 var app = app || {};
 
  app.Flight = Backbone.Model.extend({
-   idAttribute: "flightid",
+  //  idAttribute: "flightid",
    urlRoot: '/flights',
    defaults: {
      date: 'Undefined Date',
      origin: 'Unknown Origin',
      destination: 'Unknown Destination',
+     plane_id: 2
    }
  });
 

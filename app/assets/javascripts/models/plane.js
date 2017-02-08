@@ -1,6 +1,7 @@
 var app = app || {};
 
 app.Plane = Backbone.Model.extend({
+  // idAttribute: "planeid",
   urlRoot: '/planes',
   defaults: {
     name: '',
@@ -8,3 +9,8 @@ app.Plane = Backbone.Model.extend({
     columns: 0
   }
 });
+
+
+app.plane = new app.Plane();
+app.plane.fetch()
+console.log(app.plane)

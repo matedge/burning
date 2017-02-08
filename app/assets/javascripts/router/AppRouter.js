@@ -4,8 +4,9 @@ var app = app || {};
    routes: {
      '': 'index',
      'planes': 'viewPlane',
+     'planes/:planeid': 'viewPlaneById',
      'flights': 'viewFlight',
-     'flights/:flightid': 'viewFlightById',
+     'flights/:id': 'viewFlightById',
      'search': "viewSearch",
      "*other": "defaultRoute"
 
@@ -15,6 +16,8 @@ var app = app || {};
      console.log('main');
      app.newsearchview = new app.NewsearchView({collection: app.flights});
      app.newsearchview.render();
+     app.planes = new app.Planes()
+     app.planes.fetch()
 
 
 
@@ -24,16 +27,24 @@ var app = app || {};
      console.log('planes');
    },
 
+
+
+
+
    viewFlight: function() {
      console.log('flights');
-     app.seatsview = new SeatsView({ el: "#container" });
+     app.seatsview = new SeatsView({ collection: app.flights});
      app.seatsview.render();
+     app.planes = new app.Planes()
+     app.planes.fetch()
+
+// app.planes.get(2)
    },
 
-   viewFlightById: function(flightid) {
+   viewFlightById: function(id) {
 
      console.log('flights/:id');
-     app.seatsview = new SeatsView({ el: "#container" , flightsid : flightid});
+     app.seatsview = new SeatsView();
     //  app.seatsview.fetch();
      console.log(app.seatsview);
      app.seatsview.render();
