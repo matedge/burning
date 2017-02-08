@@ -1,5 +1,4 @@
-<h1>Pages#app</h1>
-<p>Find me in app/views/pages/app.html.erb</p>
+
 <div id="userName"></div>
 
 <div id="main"></div>
@@ -11,17 +10,18 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 </script>
 
 
-<a href="#">Planes</a>
-<a href="#">Flights</a>
-<a href="#">Admin</a>
-
 <div id="main" class="container"></div>
 
 <script id="newsearchView" type="text/template">
+  <div><img src="http://www.seamantours.com/wp-content/uploads/2016/04/homepage-flights.jpg" alt=""></div>
+<div id="mybox">
   <h2>Search Flights</h2>
+  <br>
+  <br>
   <textarea id= 'origin' autofocus placeholder="Origin"></textarea>
   <textarea id= 'destination' placeholder="Destination"></textarea>
   <button>Submit</button>
+  </div>
 </script>
 
 <script id="searchListView" type="text/template">

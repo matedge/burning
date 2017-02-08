@@ -1,3 +1,24 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  text-align: center;
+  background-color: black;
+}
+
+#mybox{
+  border: 0.3em solid orange;
+  width: 1100px;
+  text-align: center;
+  height: 200px;
+  margin: -220px 340px auto;
+  position: absolute;
+  background: orange;
+  opacity: 0.5;
+}
+
+
+img{
+  width: 2200px;
+  height: 600px;
+  opacity: 1%;
+  position: relative;
+
+}
