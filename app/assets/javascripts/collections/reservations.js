@@ -1,5 +1,7 @@
 var app = app || {};
-app.Flights = Backbone.Collection.extend({
+app.Reservations = Backbone.Collection.extend({
   url: '/search',
   model: app.Reservation
 });
+
+app.reservations = new app.Reservations()

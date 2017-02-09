@@ -12,5 +12,5 @@ app.Plane = Backbone.Model.extend({
 
 
 app.plane = new app.Plane();
-app.plane.fetch()
+app.plane.fetch();
 console.log(app.plane)

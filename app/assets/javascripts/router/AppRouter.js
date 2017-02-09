@@ -36,8 +36,9 @@ var app = app || {};
      app.seatsview = new SeatsView({ collection: app.flights});
      app.seatsview.render();
      app.planes = new app.Planes()
-     app.planes.fetch()
-
+     app.planes.fetch();
+     app.reservations= new app.Reservation()
+     app.reservations.fetch();
 // app.planes.get(2)
    },
 
@@ -48,6 +49,8 @@ var app = app || {};
     //  app.seatsview.fetch();
      console.log(app.seatsview);
      app.seatsview.render();
+
+
    },
 
    viewSearch: function() {

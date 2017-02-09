@@ -3,10 +3,21 @@ var SeatsView = Backbone.View.extend({
 	// initialize: function () {
 	// 	this.model.fetch(); // fetching the model data from /my/url
 	// },
-	render: function(){
-		this.$el.html("SEATS");
 
-		return this;
+	render: function() {
+	    this.$el.appendTo('#main');
+	    console.log(this.model);
+	    var planeID = this.model.get('plane_id');
+	    var plane = app.planes.where({id: plane_id });
+	    var columns = plane[0].get('columns');
+	    var rows = plane[0].get('row');
+	    console.log(columns);
+	    console.log(rows);
+
+	// // render: function(){
+	// // 	this.$el.html("SEATS");
+	//
+	// 	return this;
 	}
 });
 

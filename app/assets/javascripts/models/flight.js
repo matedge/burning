@@ -13,5 +13,5 @@ var app = app || {};
 
 
 app.flight = new app.Flight();
-app.flight.fetch()
+app.flight.fetch();
 console.log(app.flight)

@@ -6,7 +6,7 @@ app.SearchListView = Backbone.View.extend({
     'click': 'showFlight'
   },
   showFlight: function () {
-    app.appRouter.navigate('flights/' + this.model.get('id'), true);
+    app.appRouter.navigate('reservations/' + this.model.get('id'), true);
   },
   render: function () {
     var flightHTML = _.template( $('#searchListView').html() );
