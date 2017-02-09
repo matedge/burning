@@ -8,7 +8,8 @@ var app = app || {};
      'flights': 'viewFlight',
      'flights/:id': 'viewFlightById',
      'search': "viewSearch",
-     "*other": "defaultRoute"
+     'reservations/:id': "viewReservation"
+
 
    },
 
@@ -16,10 +17,31 @@ var app = app || {};
      console.log('main');
      app.newsearchview = new app.NewsearchView({collection: app.flights});
      app.newsearchview.render();
-     app.planes = new app.Planes()
-     app.planes.fetch()
+     app.planes = new app.Planes();
+     app.planes.fetch();
 
 
+
+   },
+
+   viewReservation: function() {
+     console.log('reset');
+     app.seatsview = new app.SeatsView({collection: app.flights});
+
+     var id= app.searchResults[0].attributes.plane_id;
+     console.log(id);
+     var row = app.planes.get(id).attributes.rows;
+     var col = app.planes.get(id).attributes.columns;
+     console.log(id, row, col);
+     for (var i = 0; i < col; i++) {
+       for (var j = 0; j < row; j++) {
+         $('<div></div>').appendTo('#seats');
+       }
+       $('<br>').appendTo('#seats');
+     }
+
+
+     //flight model plane id, colu row,
 
    },
 
@@ -33,7 +55,7 @@ var app = app || {};
 
    viewFlight: function() {
      console.log('flights');
-     app.seatsview = new SeatsView({ collection: app.flights});
+     app.seatsview = new SeatsView({collection: app.flights});
      app.seatsview.render();
      app.planes = new app.Planes()
      app.planes.fetch();

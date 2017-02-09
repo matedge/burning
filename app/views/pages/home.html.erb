@@ -11,7 +11,7 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 
 
 <div id="main" class="container"></div>
-
+<div id="seats"></div>
 <script id="s" type="text/template">
 
 
@@ -29,6 +29,7 @@ app.user = <%== @current_user.to_json %>   // uses ruby to get id of login user
 <div id="mybox">
   <h2>Search Flights</h2>
   <br>
+
   <table>
 
   <textarea id= 'origin' autofocus placeholder="Origin"></textarea>

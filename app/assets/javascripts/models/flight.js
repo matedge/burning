@@ -7,7 +7,7 @@ var app = app || {};
      date: 'Undefined Date',
      origin: 'Unknown Origin',
      destination: 'Unknown Destination',
-     plane_id: 2
+     
    }
  });
 

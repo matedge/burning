@@ -1,4 +1,7 @@
-var SeatsView = Backbone.View.extend({
+
+var app = app || {};
+
+app.SeatsView = Backbone.View.extend({
 	el: "#container",
 	// initialize: function () {
 	// 	this.model.fetch(); // fetching the model data from /my/url
@@ -13,12 +16,13 @@ var SeatsView = Backbone.View.extend({
 	    var rows = plane[0].get('row');
 	    console.log(columns);
 	    console.log(rows);
+			
+	// render: function(){
+	// 	this.$el.html("SEATS");
 
-	// // render: function(){
-	// // 	this.$el.html("SEATS");
-	//
-	// 	return this;
+return this;
 	}
+
 });
 
 
