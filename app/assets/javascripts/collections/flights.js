@@ -5,3 +5,6 @@ app.Flights = Backbone.Collection.extend({
 });
 
 app.flights = new app.Flights()
+
+
+//app.flights.get()

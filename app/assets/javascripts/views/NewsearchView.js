@@ -17,6 +17,7 @@ app.NewsearchView = Backbone.View.extend({
     this.collection.fetch().done(function(results){
       var searchResults = view.collection.where({origin:$origin,destination:$destination})
       console.log(searchResults);
+      app.searchResults = searchResults
       //search results get the flight id out
       //search results get the flight id out
       view.$el.find('table').show();

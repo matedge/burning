@@ -10,3 +10,7 @@ app.Reservation = Backbone.Model.extend({
     flight_id: ''
   },
 });
+
+app.reservation = new app.Reservation();
+app.reservation.fetch();
+console.log(app.reservation)

@@ -4,10 +4,12 @@ var app = app || {};
    routes: {
      '': 'index',
      'planes': 'viewPlane',
+     'planes/:planeid': 'viewPlaneById',
      'flights': 'viewFlight',
-     'flights/:flightid': 'viewFlightById',
+     'flights/:id': 'viewFlightById',
      'search': "viewSearch",
-     "*other": "defaultRoute"
+     'reservations/:id': "viewReservation"
+
 
    },
 
@@ -15,8 +17,31 @@ var app = app || {};
      console.log('main');
      app.newsearchview = new app.NewsearchView({collection: app.flights});
      app.newsearchview.render();
+     app.planes = new app.Planes();
+     app.planes.fetch();
 
 
+
+   },
+
+   viewReservation: function() {
+     console.log('reset');
+     app.seatsview = new app.SeatsView({collection: app.flights});
+
+     var id= app.searchResults[0].attributes.plane_id;
+     console.log(id);
+     var row = app.planes.get(id).attributes.rows;
+     var col = app.planes.get(id).attributes.columns;
+     console.log(id, row, col);
+     for (var i = 0; i < col; i++) {
+       for (var j = 0; j < row; j++) {
+         $('<div></div>').appendTo('#seats');
+       }
+       $('<br>').appendTo('#seats');
+     }
+
+
+     //flight model plane id, colu row,
 
    },
 
@@ -24,19 +49,30 @@ var app = app || {};
      console.log('planes');
    },
 
+
+
+
+
    viewFlight: function() {
      console.log('flights');
-     app.seatsview = new SeatsView({ el: "#container" });
+     app.seatsview = new SeatsView({collection: app.flights});
      app.seatsview.render();
+     app.planes = new app.Planes()
+     app.planes.fetch();
+     app.reservations= new app.Reservation()
+     app.reservations.fetch();
+// app.planes.get(2)
    },
 
-   viewFlightById: function(flightid) {
+   viewFlightById: function(id) {
 
      console.log('flights/:id');
-     app.seatsview = new SeatsView({ el: "#container" , flightsid : flightid});
+     app.seatsview = new SeatsView();
     //  app.seatsview.fetch();
      console.log(app.seatsview);
      app.seatsview.render();
+
+
    },
 
    viewSearch: function() {
